@@ -1,0 +1,37 @@
+<!-- Mardin zamani -->
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Digital Clock</title>
+  </head>
+  <body>
+    <div class="clock">
+      <h1>👇🏼👨🏼‍💻 ساعت الان</h1>
+      <div class="time">
+        <div><span id="hours">00</span><span>ساعت</span></div>
+        <div><span id="minutes">00</span><span>دقیقه</span></div>
+        <div><span id="seconds">00</span><span>ثانیه</span></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function clock() {
+        let hours = document.getElementById("hours");
+        let minutes = document.getElementById("minutes");
+        let seconds = document.getElementById("seconds");
+
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+      }
+      let interval = setInterval(clock, 1000);
+    </script>
+  </body>
+</html>
